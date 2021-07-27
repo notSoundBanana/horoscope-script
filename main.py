@@ -87,6 +87,6 @@ while not check_sign(user_input):
     print("Неверно введен знак зодиака\nПовторите попытку")
     user_input = str(input("\nЗнак?\n")).lower()
 if user_input[0] in "йцукенгшщзхъфывапролджэёячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЁЯЧСМИТЬБЮ":
-    sign = signsRusEn.get(user_input.lower())
+    user_input = signsRusEn.get(user_input.lower())
 
 print(Main(user_input).main())
