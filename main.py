@@ -74,7 +74,14 @@ class Main:
                 ('</p></div><div class="subscr gray">Гороскоп на сегодня: <a href="//1001goroskop.ru/?metodika/"' +
                  ' title="О методике составления ежедневных гороскопов" itemprop="author">Дмитрий Зима</a></div></td>'),
                 '')
-            lines[i] = lines[i].replace('\n', '')
+
+            lines[i] = lines[i].replace(
+                ('</p></div><div class="subscr gray"><a href="//1001goroskop.ru/?metodika/" title="О методике'
+                 ' составления ежедневных гороскопов" itemprop="author">'
+                 'Д. и Н. Зима для *1001 гороскоп*</a></div></td>'),
+                '')
+
+            lines[i] = lines[i].replace('\n', ' ')
 
         # Приводим строку в читаемый вид
         lines = str(*lines).split()
